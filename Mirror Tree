@@ -1,0 +1,14 @@
+class Solution {
+    // Function to convert a binary tree into its mirror tree.
+    public Node mirror(Node node) {
+        if(node==null)return null;
+        
+        node.left=mirror(node.left);
+        node.right=mirror(node.right);
+        
+        Node temp=node.left;
+        node.left=node.right;
+        node.right=temp;
+        return node;
+    }
+}

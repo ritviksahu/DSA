@@ -1,0 +1,12 @@
+class Solution {
+    String firstAlphabet(String S) {
+        // code here
+        String[] words=S.split("\\s");
+        String s="";
+        for(String st:words){
+            s=s+st.charAt(0);
+        }
+        return s;
+        
+    }
+};

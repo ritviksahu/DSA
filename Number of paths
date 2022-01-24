@@ -1,0 +1,14 @@
+class Solution{
+    
+    long numberOfPaths(int m, int n) {
+        // Code Here
+        long N=m+n-2;
+        long R=m-1;
+        long ans=1;
+        for(int i=1;i<=R;i++){
+            ans=ans*(N-R+i)/i;
+        }
+        return ans;
+    }
+    
+}
